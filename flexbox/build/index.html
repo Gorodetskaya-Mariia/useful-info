@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Flexbox</title>
+	<link rel="stylesheet" href="libs/normalize.css" />
+	<link rel="stylesheet" href="css/main.min.css" />
+</head>
+
+<body class="[ ds-flex justify-center align-items-center ]">
+	<section class="widgets [ text-center ]">
+		<h1 class="visually-hidden">Weather forecast</h1>
+		<article class="widget">
+			<h2 class="visually-hidden">Weather in New Jersey</h2>
+			<header class="widget__header">
+				<svg class="widget__icon widget__icon--cloudy" viewBox="0 0 148 123" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<path class="animation" fill="#778287" fill-rule="evenodd"
+						d="M91.32 16.83c1.39 0 2.52-1.14 2.52-2.55V4.09c0-1.41-1.13-2.55-2.52-2.55-1.39 0-2.52 1.14-2.52 2.55v10.19c0 1.41 1.13 2.55 2.52 2.55zm52.93 38.24h-10.08c-1.4 0-2.52 1.14-2.52 2.55s1.12 2.55 2.52 2.55h10.08c1.39 0 2.52-1.14 2.52-2.55s-1.13-2.55-2.52-2.55zm-54.19 66.27c15.03 0 27.72-13.18 27.72-28.78 0-6.58-2.34-12.65-6.08-17.56a29.643 29.643 0 0 0 9.91-22.16c0-16.35-13.15-29.64-29.31-29.64-12.52 0-23.75 8.28-27.73 20.21-12.87.13-23.78 9.21-26.6 21.72-2.74-.9-5.55-1.35-8.4-1.35-15.03 0-27.72 13.18-27.72 28.78 0 15.6 12.69 28.78 27.72 28.78h60.49zM92.3 28.3c13.38 0 24.27 11.01 24.27 24.54 0 7.1-3.02 13.74-8.27 18.41-4.58-4.24-10.38-7.06-16.76-7.43-2.88-10.34-11.43-18.05-21.74-19.96 3.61-9.23 12.55-15.56 22.5-15.56zM6.89 92.56c0-12.84 10.39-23.68 22.68-23.68 3.18 0 6.31.69 9.32 2.07.73.34 1.59.3 2.29-.1.7-.41 1.17-1.13 1.26-1.94 1.27-11.64 10.91-20.43 22.42-20.43 10.76 0 20.11 7.74 22.23 18.4a2.525 2.525 0 0 0 2.47 2.05c.18 0 .41-.03.5-.05 12.3 0 22.68 10.84 22.68 23.68s-10.38 23.68-22.68 23.68H29.57c-12.29 0-22.68-10.84-22.68-23.68zM60.5 28.39c.5.5 1.14.75 1.78.75.65 0 1.29-.25 1.79-.75.98-.99.98-2.61 0-3.6l-7.13-7.21c-.99-1-2.58-1-3.57 0-.98.99-.98 2.61 0 3.6l7.13 7.21zm62.38.75c.64 0 1.29-.25 1.78-.75l7.13-7.21c.98-.99.98-2.61 0-3.6-.99-1-2.58-1-3.57 0l-7.13 7.21c-.98.99-.98 2.61 0 3.6.5.5 1.14.75 1.79.75zM124 82.41l7.12 7.21c.5.5 1.14.75 1.79.75.64 0 1.29-.25 1.78-.75.98-.99.98-2.61 0-3.6l-7.13-7.21c-.98-1-2.58-1-3.56 0-.99.99-.99 2.61 0 3.6z">
+					</path>
+				</svg>
+				<div class="widget__info [ ds-flex align-items-center ]">
+					<p class="widget__temperature [ fade ]">79&deg;</p>
+					<div class="widget__location [ text-left fade ]">
+						<p class="widget__type">Cloudy Skies</p>
+						<p class="widget__address">Sicklerville, New Jersey</p>
+					</div>
+					<div class="widget__date [ text-uppercase ]">
+						<p class="widget__date-month">may</p>
+						<p class="widget__date-day">21</p>
+					</div>
+				</div>
+			</header>
+			<div class="widget__params [ ds-flex justify-center ]">
+				<div class="widget__param widget__param--pressure [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--pressure">
+						<use xlink:href="#icon-pressure"></use>
+					</svg>
+					<p class="widget__value [ text-uppercase fade ]">2 mph</p>
+				</div>
+				<div class="widget__param widget__param--humidity [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--pressure">
+						<use xlink:href="#icon-humidity"></use>
+					</svg>
+					<p class="widget__value [ fade ]">33%</p>
+				</div>
+				<div class="widget__param widget__param--sunshine [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--sunshine">
+						<use xlink:href="#icon-sunshine"></use>
+					</svg>
+					<p class="widget__value [ fade ]">83%</p>
+				</div>
+			</div>
+		</article>
+		<article class="widget">
+			<h2 class="visually-hidden">Weather in Chicago</h2>
+			<header class="widget__header">
+				<svg class="widget__icon widget__icon--rainy" viewBox="0 0 94 81" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<path class="animation" fill="#778287" fill-rule="evenodd"
+						d="M67.39 66.44h-2.04c0-2.8-.65-5.6-1.93-8.17h3.97c9.03 0 16.35-7.32 16.35-16.34 0-9.03-7.32-16.35-16.35-16.35-3.27 0-6.3.99-8.85 2.64C56.02 17.36 46.33 9.24 34.7 9.24c-13.54 0-24.51 10.97-24.51 24.51 0 12.17 8.86 22.23 20.48 24.16-1.3 2.49-1.98 5.21-2.07 7.94-15.13-2.86-26.59-16.13-26.59-32.1C2.01 15.7 16.65 1.07 34.7 1.07c12.27 0 22.95 6.76 28.54 16.76 1.35-.23 2.73-.42 4.15-.42 13.54 0 24.52 10.98 24.52 24.52S80.93 66.44 67.39 66.44zM46.96 52l7.23 7.22c3.98 3.99 3.98 10.46 0 14.45-3.99 3.99-10.46 3.99-14.45 0-3.99-3.99-3.99-10.46 0-14.45L46.96 52z">
+					</path>
+				</svg>
+				<div class="widget__info [ ds-flex align-items-center ]">
+					<p class="widget__temperature [ fade ]">26&deg;</p>
+					<div class="widget__location [ text-left fade ]">
+						<p class="widget__type">Rainy Skies</p>
+						<p class="widget__address">Chicago, Illinois</p>
+					</div>
+					<div class="widget__date [ text-uppercase ]">
+						<p class="widget__date-month">may</p>
+						<p class="widget__date-day">21</p>
+					</div>
+				</div>
+			</header>
+			<div class="widget__params [ ds-flex justify-center ]">
+				<div class="widget__param widget__param--pressure [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--pressure">
+						<use xlink:href="#icon-pressure"></use>
+					</svg>
+					<p class="widget__value [ text-uppercase fade ]">3 mph</p>
+				</div>
+				<div class="widget__param widget__param--humidity [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--pressure">
+						<use xlink:href="#icon-humidity"></use>
+					</svg>
+					<p class="widget__value [ fade ]">83%</p>
+				</div>
+				<div class="widget__param widget__param--sunshine [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--sunshine">
+						<use xlink:href="#icon-sunshine"></use>
+					</svg>
+					<p class="widget__value [ fade ]">13%</p>
+				</div>
+			</div>
+		</article>
+		<article class="widget">
+			<h2 class="visually-hidden">Weather in Portland</h2>
+			<header class="widget__header">
+				<svg class="widget__icon widget__icon--snowy" viewBox="0 0 90 96" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<path class="animation" fill="#778287" fill-rule="evenodd"
+						d="M84.03 41.87h-6.28a3.139 3.139 0 1 1 0-6.28h6.28c1.74 0 3.14 1.41 3.14 3.14 0 1.74-1.4 3.14-3.14 3.14zm-12.34-20.9a3.15 3.15 0 0 1-4.44 0 3.15 3.15 0 0 1 0-4.44l4.44-4.45a3.163 3.163 0 0 1 4.45 0 3.163 3.163 0 0 1 0 4.45l-4.45 4.44zm-4.62 24.51c2.74 3.27 4.4 7.49 4.4 12.1 0 8.2-5.25 15.15-12.56 17.74v-6.88c3.75-2.17 6.28-6.22 6.28-10.86 0-6.94-5.62-12.57-12.56-12.57-2.52 0-4.84.76-6.81 2.03-1.93-8.35-9.38-14.59-18.32-14.59-10.4 0-18.84 8.44-18.84 18.84 0 5.58 2.43 10.57 6.28 14.02v7.72C7.44 68.68 2.38 60.59 2.38 51.29c0-13.87 11.25-25.12 25.12-25.12 2.47 0 4.85.36 7.11 1.03 3.45-4.44 8.82-7.31 14.88-7.31 10.4 0 18.84 8.44 18.84 18.84 0 2.38-.46 4.65-1.26 6.75zM49.49 26.17c-3.48 0-6.62 1.41-8.9 3.69 3.68 2.25 6.74 5.42 8.84 9.19 1.05-.17 2.1-.32 3.2-.32 3.34 0 6.47.88 9.18 2.4.16-.78.24-1.58.24-2.4 0-6.94-5.62-12.56-12.56-12.56zm0-12.56c-1.74 0-3.14-1.41-3.14-3.14V4.19c0-1.74 1.4-3.14 3.14-3.14 1.73 0 3.14 1.4 3.14 3.14v6.28c0 1.73-1.41 3.14-3.14 3.14zm-22.21 7.36l-4.44-4.44a3.145 3.145 0 0 1 0-4.45 3.15 3.15 0 0 1 4.44 0l4.44 4.45a3.132 3.132 0 0 1 0 4.44 3.15 3.15 0 0 1-4.44 0zm-2.92 42.89c1.74 0 3.14 1.4 3.14 3.14a3.139 3.139 0 1 1-6.28 0c0-1.74 1.41-3.14 3.14-3.14zm0 12.56c1.74 0 3.14 1.4 3.14 3.14a3.139 3.139 0 1 1-6.28 0c0-1.74 1.41-3.14 3.14-3.14zm12.57-6.28a3.139 3.139 0 1 1 0 6.28c-1.74 0-3.15-1.41-3.15-3.14 0-1.74 1.41-3.14 3.15-3.14zm0 12.56c1.73 0 3.14 1.41 3.14 3.14a3.145 3.145 0 0 1-6.29 0c0-1.73 1.41-3.14 3.15-3.14zm12.56-18.84a3.139 3.139 0 1 1 0 6.28c-1.74 0-3.14-1.41-3.14-3.14 0-1.74 1.4-3.14 3.14-3.14zm0 12.56a3.139 3.139 0 1 1 0 6.28c-1.74 0-3.14-1.41-3.14-3.14 0-1.74 1.4-3.14 3.14-3.14z">
+					</path>
+				</svg>
+				<div class="widget__info [ ds-flex align-items-center ]">
+					<p class="widget__temperature [ fade ]">9&deg;</p>
+					<div class="widget__location [ text-left fade ]">
+						<p class="widget__type">Snowy Skies</p>
+						<p class="widget__address">Portland</p>
+					</div>
+					<div class="widget__date [ text-uppercase ]">
+						<p class="widget__date-month">may</p>
+						<p class="widget__date-day">21</p>
+					</div>
+				</div>
+			</header>
+			<div class="widget__params [ ds-flex justify-center ]">
+				<div class="widget__param widget__param--pressure [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--pressure">
+						<use xlink:href="#icon-pressure"></use>
+					</svg>
+					<p class="widget__value [ text-uppercase fade ]">2 mph</p>
+				</div>
+				<div class="widget__param widget__param--humidity [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--pressure">
+						<use xlink:href="#icon-humidity"></use>
+					</svg>
+					<p class="widget__value [ fade ]">73%</p>
+				</div>
+				<div class="widget__param widget__param--sunshine [ ds-flex align-items-center ]">
+					<svg class="widget__icon widget__icon--sunshine">
+						<use xlink:href="#icon-sunshine"></use>
+					</svg>
+					<p class="widget__value [ fade ]">23%</p>
+				</div>
+			</div>
+		</article>
+		<div class="widgets__dots [ text-center ]">
+			<span class="widgets__dot" onclick="currentSlide(1)"></span>
+			<span class="widgets__dot" onclick="currentSlide(2)"></span>
+      <span class="widgets__dot" onclick="currentSlide(3)"></span>
+    </div>
+    <button class="widgets__btn">
+      <svg class="widgets__icon">
+        <use xlink:href="#icon-refresh"></use>
+      </svg>
+    </button>
+	</section>
+	<svg style="position: absolute; z-index: -1; visibility: hidden;">
+		<symbol id="icon-pressure" viewBox="0 0 34 22" xmlns="http://www.w3.org/2000/svg">
+			<path fill="#525a5d" stroke="#2e3335"
+				d="M28.78 14.3c-2.95 0-3.52-2.54-5.9-2.54-2.56 0-2.94 2.57-5.89 2.57-2.95 0-3.33-2.57-5.9-2.57-2.51 0-2.94 2.54-5.89 2.54-2.95 0-2.95-3.14 0-3.14 2.51 0 2.95-2.49 5.89-2.49 2.95 0 3.41 2.51 5.9 2.51 2.54 0 2.94-2.51 5.89-2.51 2.95 0 3.36 2.46 5.9 2.46 2.95 0 2.95 3.17 0 3.17zm0-5.67c-2.95 0-3.52-2.54-5.9-2.54-2.56 0-2.94 2.57-5.89 2.57-2.95 0-3.33-2.57-5.9-2.57-2.51 0-2.94 2.54-5.89 2.54-2.95 0-2.95-3.14 0-3.14C7.71 5.49 8.15 3 11.09 3c2.95 0 3.41 2.52 5.9 2.52 2.54 0 2.94-2.52 5.89-2.52 2.95 0 3.36 2.46 5.9 2.46 2.95 0 2.95 3.17 0 3.17zM5.2 16.82c2.51 0 2.95-2.49 5.89-2.49 2.95 0 3.41 2.52 5.9 2.52 2.54 0 2.94-2.52 5.89-2.52 2.95 0 3.36 2.47 5.9 2.47 2.95 0 2.95 3.17 0 3.17s-3.52-2.54-5.9-2.54c-2.56 0-2.94 2.56-5.89 2.56-2.95 0-3.33-2.56-5.9-2.56-2.51 0-2.94 2.54-5.89 2.54-2.95 0-2.95-3.15 0-3.15z">
+			</path>
+		</symbol>
+		<symbol id="icon-humidity" viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+			<path fill="#525a5d"
+				d="M15.65 7.85L9.99 1.99 4.34 7.85c-3.13 3.24-3.13 8.48 0 11.72 3.12 3.24 8.19 3.24 11.31 0 3.12-3.24 3.12-8.48 0-11.72zM5.59 18.27c-2.43-2.52-2.43-6.6 0-9.12l4.4-4.56 4.4 4.56c2.43 2.52 2.43 6.6 0 9.12a6.083 6.083 0 0 1-8.8 0z">
+			</path>
+		</symbol>
+		<symbol id="icon-sunshine" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path fill="#525a5d"
+				d="M12.88 2.38v1.75c0 .48-.4.87-.88.87a.87.87 0 0 1-.87-.87V2.38c0-.49.39-.88.87-.88s.88.39.88.88zM12 19c-.48 0-.87.39-.87.88v1.75c0 .48.39.87.87.87s.88-.39.88-.87v-1.75c0-.49-.4-.88-.88-.88zM4.58 4.58c-.35.34-.35.89 0 1.23l1.23 1.24c.34.34.9.34 1.24 0 .34-.34.34-.9 0-1.24L5.81 4.58a.852.852 0 0 0-1.23 0zm12.37 12.37c-.34.34-.34.9 0 1.24l1.24 1.23c.34.35.89.35 1.23 0 .35-.34.35-.89 0-1.23l-1.23-1.24a.881.881 0 0 0-1.24 0zM1.5 12c0 .48.39.88.88.88h1.75c.48 0 .87-.4.87-.88a.87.87 0 0 0-.87-.87H2.38c-.49 0-.88.39-.88.87zM19 12c0 .48.39.88.87.88h1.76c.48 0 .87-.4.87-.88a.87.87 0 0 0-.87-.87h-1.76A.87.87 0 0 0 19 12zM4.58 19.42c.34.35.89.35 1.23 0l1.24-1.23c.34-.34.34-.9 0-1.24a.881.881 0 0 0-1.24 0l-1.23 1.24c-.35.34-.35.89 0 1.23zM16.95 7.05c.34.34.9.34 1.24 0l1.23-1.24c.35-.34.35-.89 0-1.23a.852.852 0 0 0-1.23 0l-1.24 1.23c-.34.34-.34.9 0 1.24zm.3 4.95a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 1 1 10.5 0zm-1.75 0c0-1.93-1.57-3.5-3.5-3.5S8.5 10.07 8.5 12s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5z">
+			</path>
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 21" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path fill="#d5dbdc" d="M23 2.9v5.7c0 .52-.43.95-.95.95h-5.73c-.53 0-.96-.43-.96-.95s.43-.95.96-.95h3.22c-1.3-1.26-2.32-2.25-2.59-2.52a7.49 7.49 0 0 0-2.53-1.67 7.652 7.652 0 0 0-5.75 0c-.95.38-1.79.94-2.52 1.67-.73.72-1.3 1.57-1.68 2.51-.37.91-.56 1.87-.56 2.86 0 .99.19 1.95.56 2.86.38.94.95 1.79 1.68 2.51.73.73 1.57 1.29 2.52 1.67a7.652 7.652 0 0 0 5.75 0c.95-.38 1.8-.94 2.53-1.67a7.678 7.678 0 0 0 1.8-2.84c.17-.49.72-.75 1.21-.58.5.18.76.72.59 1.22-.23.65-.54 1.28-.91 1.87-.38.6-.83 1.17-1.34 1.68-.92.9-1.98 1.61-3.16 2.08-.57.23-1.17.41-1.77.53-.6.11-1.21.17-1.82.17-.62 0-1.23-.06-1.83-.17-.6-.12-1.2-.3-1.77-.53a9.452 9.452 0 0 1-3.15-2.08 9.358 9.358 0 0 1-2.1-3.15c-.23-.56-.41-1.15-.53-1.76-.11-.59-.17-1.2-.17-1.81 0-.61.06-1.22.17-1.81.12-.61.3-1.2.53-1.76a9.358 9.358 0 0 1 2.1-3.15c.91-.9 1.97-1.61 3.15-2.08.57-.23 1.17-.41 1.77-.53.6-.11 1.21-.17 1.83-.17.61 0 1.22.06 1.82.17.6.12 1.2.3 1.77.53 1.18.47 2.24 1.18 3.16 2.08.28.29 1.4 1.37 2.79 2.72V2.9a.956.956 0 0 1 1.91 0z"></path>
+      </symbol>
+	</svg>
+	<script src="js/scripts.min.js"></script>
+</body>
+
+</html>

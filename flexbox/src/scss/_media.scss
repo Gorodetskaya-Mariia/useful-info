@@ -1,0 +1,21 @@
+@media screen and (max-width: 460px) {
+  :root {
+    font-size: 7px;
+	}
+
+	.widget__address {
+		font-size: 2rem;
+	}
+
+	.widget__date {
+		font-size: 1.5rem;
+	}
+
+	.widget__param {
+		font-size: 1.6rem;
+	}
+
+	.widgets__dots {
+		margin-top: -1px;
+	}
+}

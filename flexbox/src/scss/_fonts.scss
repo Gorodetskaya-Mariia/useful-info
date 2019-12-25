@@ -1,0 +1,55 @@
+@font-face {
+  font-weight: 300;
+  font-family: "Proxima Nova Alt Lt";
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/ProximaNovaLight/Proxima Nova Alt Light.otf") format("otf"),
+  url("../fonts/ProximaNovaLight/ProximaNovaA-Light.woff") format("woff"),
+  url("../fonts/ProximaNovaLight/ProximaNovaA-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "ProximaBold";
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("ttf"),
+      url("../fonts/ProximaNovaBold/ProximaNovaBold.eot") format("eot"),
+      url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "SourceSansProLight";
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/SourceSansProLight/SourceSansProLight.ttf") format("ttf"),
+      url("../fonts/SourceSansProLight/SourceSansProLight.eot") format("eot"),
+      url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/SourceSansProSemiBold/SourceSansPro-SemiBold.ttf") format("ttf"),
+  url("../fonts/SourceSansProSemiBold/SourceSansPro-SemiBold.woff") format("woff"),
+  url("../fonts/SourceSansProSemiBold/SourceSansPro-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "OpenSansBold";
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/OpenSansBold/OpenSansBold.ttf") format("ttf"),
+      url("../fonts/OpenSansBold/OpenSansBold.eot") format("eot"),
+      url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"),
+      url("../fonts/OpenSansBold/OpenSansBold.woff2") format("woff2");
+}

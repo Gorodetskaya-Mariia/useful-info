@@ -1,0 +1,11 @@
+//global styles
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "library";
+@import "global";
+//blocks
+@import "blocks/widgets";
+@import "blocks/widget";
+//media queries
+@import "media";

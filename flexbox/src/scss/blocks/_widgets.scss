@@ -1,0 +1,43 @@
+.widgets {
+  position: relative;
+  width: 39rem;
+  border-radius: 1rem;
+  box-shadow: 1rem 1.8rem 2.1rem rgba(0, 0, 0, 0.15);
+
+  &__dots {
+    padding: 1.7rem 0;
+    background-color: #2e3335;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  &__dot {
+    cursor: pointer;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.2rem solid rgba(255, 255, 255, 0.2);
+
+    &.active,
+    &:hover {
+      background-color: #ffffff;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    border: 0;
+    background-color: transparent;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 21px;
+  }
+}

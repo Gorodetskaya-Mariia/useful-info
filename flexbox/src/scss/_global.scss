@@ -1,0 +1,87 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body * {
+  color: $color-accent;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: $body-bg;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 27.3rem;
+    background: url(../img/gloss.png) no-repeat center;
+    z-index: -1;
+  }
+}
+
+h1, h2, p {
+  @include clear;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes fade {
+  0% {opacity: 0}
+  30% {opacity: 0.3}
+  60% {opacity: 0.6}
+  100% {opacity: 1}
+}
+
+@keyframes fade {
+  0% {opacity: 0}
+  30% {opacity: 0.3}
+  60% {opacity: 0.6}
+  100% {opacity: 1}
+}
+
+.animation {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 500;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: dash;
+	stroke: #778287;
+	stroke-width: 2;
+}
+
+@-webkit-keyframes dash {
+  from {
+    fill: transparent;
+  }
+  to {
+    stroke-dashoffset: 0;
+    fill: #778287;
+  }
+}
+
+@keyframes dash {
+  from {
+    fill: transparent;
+  }
+  to {
+    stroke-dashoffset: 0;
+    fill: #778287;
+  }
+}

@@ -1,0 +1,96 @@
+.widget {
+	display: none;
+
+	&.active {
+		display: block;
+  }
+
+  &__header {
+    padding: 6.5rem 0 1.7rem 0;
+    background-color: #f1f8f9;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    .widget__icon {
+      height: 12.5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__temperature {
+    font-family: $font-proxima-light;
+    font-size: 5.8rem;
+    color: #8d9396;
+    margin: 0 1.4rem 0 2rem;
+  }
+
+  &__location {
+    margin-right: auto;
+  }
+
+  &__type {
+    font-family: $font-source-light;
+    font-size: 2.4rem;
+    color: #bac2c6;
+  }
+
+  &__address {
+    font-family: $font-source-semi-bold;
+    font-size: 1.6rem;
+    color: #a2a9ad;
+  }
+
+  &__date {
+    padding: 1.5rem 1.7rem;
+    font-family: $font-open-sans-bold;
+    font-size: 1.4rem;
+    background-color: #54bae6;
+
+    &-month {
+      margin-bottom: 0.6rem;
+    }
+
+    &-day {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__params {
+    padding: 4.5rem 0 2rem 0;
+    background-color: #2e3335;
+  }
+
+  &__param {
+    margin-right: 2.2rem;
+    font-family: $font-open-sans-bold;
+    font-size: 1.4rem;
+
+    .widget__icon {
+      margin-right: 1.4rem;
+    }
+  }
+
+  &__icon {
+    &--cloudy,
+    &--rainy,
+    &--snowy {
+      width: 150px;
+      height: 130%;
+    }
+
+    &--pressure {
+      width: 34px;
+      height: 22px;
+    }
+
+    &--humidity {
+      width: 20px;
+      height: 24px;
+    }
+
+    &--sunshine {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin clear {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin title {
+  font-family: $font-bold;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
