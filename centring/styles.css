@@ -1,0 +1,49 @@
+body {
+	display: flex;
+}
+
+.container {
+	display: block;
+	position: relative;
+	width: 600px;
+	height: 600px;
+	margin: 30px auto;
+	border: 1px solid green;
+}
+
+.block--fixed {
+	width: 200px;
+	height: 150px;
+}
+
+.block {	
+	border: 1px solid red;
+}
+/* for every variant */
+/* first mode: styles for container */
+.container--center {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* second mode: styles for block */
+.block--center {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* --------------------------------------------------- */
+
+/* third mode for fixed: styles for block*/
+.block--center {
+	position: absolute;
+	top: calc(50% - 75px);
+	right: calc(50% - 100px);
+}
+
+/* fourth mode for fixed: styles for block*/
+.block--center {
+	margin: 225px auto 0 auto;
+}
