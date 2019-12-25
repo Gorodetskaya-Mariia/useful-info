@@ -1,0 +1,30 @@
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 7px;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  .widget {
+    width: 37rem;
+    margin: 1rem;
+    grid-template-areas:
+      "info"
+      "temperature"
+      "graph"
+      "days";
+  }
+
+  .widget__info {
+    width: 37rem;
+    border: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    height: auto;
+  }
+}

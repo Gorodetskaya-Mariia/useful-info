@@ -1,0 +1,66 @@
+.widget {
+  width: 58rem;
+  grid-template-areas:
+    "info temperature"
+    "info graph"
+    "info days";
+  border-radius: $border-radius;
+  box-shadow: 0.1rem 0.2rem 2.1rem rgba(0, 0, 0, 0.44);
+  background-color: $bg;
+
+  &__info {
+    width: 29rem;
+    grid-area: info;
+    background: $bg url("../img/info-bg.jpg") no-repeat;
+    background-size: cover;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-right: 1px solid $color-accent;
+  }
+
+  &__temperature {
+    grid-area: temperature;
+    padding-top: 3.6rem;
+    margin: 0 4rem;
+    letter-spacing: 0.6rem;
+    font-size: 9.7rem;
+    line-height: 8rem;
+    @include border-bottom;
+  }
+
+  &__graph {
+    grid-area: graph;
+    padding-top: 2rem;
+    margin: 0 4rem;
+    @include border-bottom;
+  }
+
+  &__days {
+    margin: 0 4rem;
+    grid-area: days;
+    grid-template:
+      "thu fri sat" 1fr /
+      1fr 1fr 1fr;
+  }
+
+  &__day {
+    grid-template-areas:
+      "img"
+      "title"
+      "temp-day"
+      "temp-night";
+    margin: 2.4rem 1rem;
+
+    &--thu {
+      grid-area: thu;
+    }
+
+    &--fri {
+      grid-area: fri;
+    }
+
+    &--sat {
+      grid-area: sat;
+    }
+  }
+}

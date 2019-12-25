@@ -1,0 +1,50 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body * {
+  color: $color-accent;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: $font-dosis-extra-light;
+  background: #000 url(../img/bg.jpg) center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+h1, h2, h3, p {
+  @include clear;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.text-center {
+  text-align: center;
+}

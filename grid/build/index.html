@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid</title>
+  <link rel="stylesheet" href="libs/normalize.css" />
+  <link rel="stylesheet" href="css/main.min.css" />
+</head>
+
+<body>
+  <section class="widget [ grid-container ]">
+    <h1 class="visually-hidden">Weather forecast</h1>
+    <article class="widget__info  [ text-center ]">
+      <h2 class="widget__title visually-hidden">Weather in Tokyo</h2>
+      <div class="info__icon [ text-center ]">
+        <svg class="info__icon-sun">
+          <use xlink:href="#icon-sun" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+      </div>
+      <p class="info__type">Sunny</p>
+      <p class="info__details">Tokyo - Wednesday, July 31</p>
+    </article>
+    <article class="widget__temperature [ text-center ]">
+      <h2 class="widget__title visually-hidden">Temperature</h2>
+      <p class="temperature__value">28&degC</p>
+    </article>
+    <article class="widget__graph">
+      <h2 class="widget__title visually-hidden">Graph</h2>
+      <img class="graph__image" src="img/graph.png" alt="Graph" />
+    </article>
+    <article class="widget__days [ grid-container text-center ]">
+      <h2 class="widget__title visually-hidden">Weather in Tokyo</h2>
+      <div class="widget__day widget__day--thu [ grid-container text-center ]">
+        <h3 class="day__title">Thu</h3>
+        <img class="day__image" src="img/sunny.png" alt="Sunny" />
+        <p class="day__temper-day">28&degC</p>
+        <p class="day__temper-night">18&degC</p>
+      </div>
+      <div class="widget__day widget__day--fri [ grid-container text-center ]">
+        <h3 class="day__title">Fri</h3>
+        <img class="day__image" src="img/cloudy.png" alt="Cloudy" />
+        <p class="day__temper-day">22&degC</p>
+        <p class="day__temper-night">20&degC</p>
+      </div>
+      <div class="widget__day widget__day--sat [ grid-container text-center ]">
+        <h3 class="day__title">Sat</h3>
+        <img class="day__image" src="img/cloudy.png" alt="Cloudy" />
+        <p class="day__temper-day">30&degC</p>
+        <p class="day__temper-night">27&degC</p>
+      </div>
+    </article>
+  </section>
+  <svg style="position: absolute; z-index: -1; visibility: hidden;">
+    <symbol id="icon-sun" viewBox="0 0 146 146" xmlns="http://www.w3.org/2000/svg">
+      <path class="ashp0"
+        d="M72.41 38.31c18.94 0 34.31 15.36 34.31 34.31 0 18.95-15.37 34.31-34.31 34.31-18.95 0-34.32-15.36-34.32-34.31 0-18.95 15.37-34.31 34.32-34.31z"
+        fill="none" stroke="#fff" stroke-width="9" />
+      <path class="ashp1"
+        d="M124.17 67.05h15.47c2.63 0 4.76 2.13 4.76 4.76V73c0 2.63-2.13 4.76-4.76 4.76h-15.47c-2.63 0-4.76-2.13-4.76-4.76v-1.19c0-2.63 2.13-4.76 4.76-4.76zM6.36 67.05h15.47c2.63 0 4.76 2.13 4.76 4.76V73c0 2.63-2.13 4.76-4.76 4.76H6.36c-2.63 0-4.76-2.13-4.76-4.76v-1.19c0-2.63 2.13-4.76 4.76-4.76zM73 1.6h1.19c2.63 0 4.76 2.13 4.76 4.76v15.47c0 2.63-2.13 4.76-4.76 4.76H73c-2.63 0-4.76-2.13-4.76-4.76V6.36c0-2.63 2.13-4.76 4.76-4.76zM73 119.41h1.19c2.63 0 4.76 2.13 4.76 4.76v15.47c0 2.63-2.13 4.76-4.76 4.76H73c-2.63 0-4.76-2.13-4.76-4.76v-15.47c0-2.63 2.13-4.76 4.76-4.76zM21.24 21.49l.84-.84a4.768 4.768 0 0 1 6.74 0L41.2 33.03a4.756 4.756 0 0 1 0 6.73l-.84.84c-1.86 1.86-4.88 1.86-6.73 0L21.24 28.22a4.756 4.756 0 0 1 0-6.73zM105.99 106.24l.84-.84c1.86-1.86 4.88-1.86 6.73 0l12.39 12.38a4.756 4.756 0 0 1 0 6.73l-.84.84a4.768 4.768 0 0 1-6.74 0l-12.38-12.38a4.756 4.756 0 0 1 0-6.73zM127.01 18.75l.84.84a4.756 4.756 0 0 1 0 6.73L113.56 40.6c-1.85 1.86-4.87 1.86-6.73 0l-.84-.84a4.756 4.756 0 0 1 0-6.73l14.28-14.28a4.768 4.768 0 0 1 6.74 0zM40.36 105.4l.84.84a4.756 4.756 0 0 1 0 6.73l-14.28 14.28a4.768 4.768 0 0 1-6.74 0l-.84-.84a4.756 4.756 0 0 1 0-6.73l14.29-14.28c1.85-1.86 4.87-1.86 6.73 0z"
+        fill="#fff" />
+    </symbol>
+  </svg>
+</body>
+
+</html>

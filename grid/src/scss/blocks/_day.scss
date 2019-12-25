@@ -1,0 +1,26 @@
+.day {
+  &__title {
+    grid-area: title;
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.6rem;
+    @include border-bottom;
+  }
+
+  &__image {
+    grid-area: img;
+    margin: 0 auto 0.5rem auto;
+  }
+
+  &__temper-day {
+    grid-area: temp-day;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__temper-night {
+    grid-area: temp-night;
+    font-size: 1.6rem;
+    color: #332126;
+  }
+}
