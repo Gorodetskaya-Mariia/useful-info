@@ -1,115 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Title</title>
-		<link rel="stylesheet" href="styles.css" />
-    <script src="Chart.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Useful info</title>
 </head>
 <body>
-<section class="container">
-    <canvas id="canvas" class="chartjs-render-monito"></canvas>
-</section>
-
-<script>
-    var DATES = ['15.11.18', '16.11.18', '23.04.19', '21.05.19', '25.07.19'];
-    var PRICES = [3741000, 3805000, 4129000, 3920000, 4530000];
-    var config = {
-				type: 'line',
-				responsive: true,
-        data: {
-            labels: DATES,
-            datasets: [{
-                label: '',
-                fill: false,
-                backgroundColor: '#3fb3db',
-                borderColor: '#3fb3db',
-                borderWidth: '2',
-                data: PRICES,
-                pointBorderColor: '#3fb3db',
-                pointBackgroundColor: '#3fb3db',
-                pointRadius: 3,
-                pointBorderWidth: 3,
-                pointStyle: 'rounded'
-            }]
-        },
-        options: {
-            responsive: true,
-            title: {
-                display: false,
-            },
-            tooltips: {
-                enabled: false
-            },
-            hover: {
-                mode: 'nearest',
-                intersect: true
-            },
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: '#071727',
-                    fontFamily: 'PT Sans',
-                    fontSize: 13,
-                    boxWidth: 0,
-                    padding: 12,
-                    filter: function(legendItem, chartData) {
-                        if (legendItem.datasetIndex === 0) {
-                            return false;
-                        }
-                        return true;
-                    }
-                }
-            },
-            scales: {
-                xAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: true,
-                        labelString: ''
-                    },
-                    gridLines: {
-                        color: '#b8c5e4',
-                        drawOnChartArea:false,
-                        drawBorder: false,
-                    }
-                }],
-                yAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: true,
-                        labelString: ''
-                    },
-                    labels: ['1 млн', '2млн', '3млн', '4млн', '5млн'],
-                    ticks: {
-                        stepSize: 1000000,
-                        min: 0,
-                        callback: function(value, index, values) {
-                            if(index === 5){
-                                return '';
-                            } else {
-                                return value/1000000 + ' млн.  ';
-                            }
-                        },
-                        beginAtZero: true
-                    },
-                    gridLines: {
-                        color: '#e9edf1',
-                        drawBorder: false,
-                        zeroLineColor: "#b8c5e4"
-                    }
-                }]
-            }
-        }
-    };
-    
-    window.onload = function() {
-        var ctx = document.getElementById('canvas').getContext('2d');
-        window.myLine = new Chart(ctx, config);
-    };
-
-
-</script>
+	<a href="Chartjs/index.html">Chartjs</a>
+	<style>
+		body {
+			padding: 100px;
+			margin: 0;			
+		}
+		* {
+			font-size: 20px;
+		}
+	</style>
 </body>
 </html>
