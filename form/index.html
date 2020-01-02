@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Form</title>
+	<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<button class="button__contact">Contact us</button>
+	<section class="form__wrapper">
+		<div class="form__container">
+			<div id="requestForm">
+				<div id="contact-form" class="form-contact">
+					<h3 class="form__help-title">
+						Waiting is Overrated. </h3>
+					<p class="form__help-copy">
+						Discover luxurious &amp; ideal living in a Quick Move-in home. </p>
+					<fieldset>
+						<legend class="visually-hidden">Contact Information</legend>
+						<div class="form__element">
+							<label for="FirstName">First Name*</label>
+							<input class="required" id="FirstName" name="FirstName" placeholder="First Name*" type="text" value="">
+						</div>
+						<div class="form__element">
+							<label for="LastName">Last Name*</label>
+							<input class="required" id="LastName" name="LastName" placeholder="Last Name*" type="text" value="">
+						</div>
+						<div class="form__element">
+							<label for="Email">Email*</label>
+							<input class="required" id="Email" name="Email" placeholder="Email*" type="text" value="">
+						</div>
+						<div class="form__element">
+							<label for="Phone1">Phone</label>
+							<input id="Phone1" name="Phone1" placeholder="Phone" type="text" value="">
+						</div>
+						<div class="form__element">
+							<label for="GeneralInformation">General Information</label>
+							<textarea id="GeneralInformation" name="GeneralInformation" maxlength="500" placeholder="Comments" type=""
+								value=""></textarea>
+						</div>
+					</fieldset>
+					<div class="form__element buttons">
+						<input type="button" class="button neptune-color form-submit" value="Submit" id="form-submit">
+						<input type="button" class="button white-color close-button" value="No, thank you">
+					</div>
+					<p class="required-copy">* Required Field</p>
+					<p class="disclaimer">By clicking submit, I acknowledge that I have read and consent to the following <a
+							class="disclaimer-link" target="_blank" href="#">Terms and
+							Conditions and Privacy Policy</a>, which is the basis for gathering all information from or about me.
+					</p>
+				</div>
+			</div>
+			<div id="requestThankYou" class="form-thank-you-message">
+				<img class="check-mark-icon" src="./images/check-mark.png">
+				<h3>
+					Thank You! </h3>
+				<hr>
+				<p>
+					Your information has been received. One of our Community Information Specialists will be in touch with you
+					shortly. We can't wait to help you discover your new K. Hovnanian<sup>®</sup> home! </p>
+				<input type="button" class="button neptune-color close-button" value="Close">
+			</div>
+			<div class="form__close">Close</div>
+		</div>
+	</section>
+	<div class="overlay"></div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
