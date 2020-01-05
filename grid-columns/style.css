@@ -1,0 +1,68 @@
+.container {
+  width: 80vw;
+  margin: 10vw;
+  border: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 100%;
+  }
+}
+/* КОРОЧЕ, ВСЯ ФИШКА В ТОМ, ЧТО ЗА МЕДИАВЫРАЖЕНИЕМ <700px мы переопределяем свойство display у левой
+и правой колонки. Мы задаём display:content. Оно работает вообще интересно, грубо говоря мы уничтожаем нашего родителя, и 
+нашим новым контейнером становится родитель родителя. Убив левый контейнер и правый контейнер этим дисплей-контент, мы 
+имеем единый контейнер для наших всех элементов, то есть div class="container". И дальше херачим как нивчём небывало свойства
+флекса или грида как для контейнера с одинаковыми элементами, не смотря на то, что в разметке это у нас 2 разных контейнера
+со своими элементами. Есть подводный камень, поддержка 73% браузеров. Эта фигня еще недавно появилась. Можно с ней работать через директиву
+@suppors. Мол, если браузер поддерживает, то дисплей контент, а если нет, то чёто другое.
+Например, для неподдерживающих мы позиционируем относительно чегонибуть. А там где работает, то разботает заебца */
+/* Вот тут всё происходит, это огонь!!!: 
+@media only screen and (max-width: 768px) {
+  .column {
+    display: contents;
+    grid-template-columns: 100%;
+  }
+} */
+
+.column {
+  width: 100%;
+  display: grid;
+}
+.column.column-left {
+  background-color: #FEE;
+  grid-template-columns: 100%;
+  grid-auto-rows: 50px;
+}
+.column.column-right {
+  background-color: #EFE;
+}
+@media only screen and (max-width: 768px) {
+  .column {
+    display: contents;
+    grid-template-columns: 100%;
+  }
+}
+
+.block {
+  border-radius: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  order: auto;
+}
+@media only screen and (max-width: 768px) {
+  .block {
+    order: 4;
+  }
+  .block.left-block--1 {
+    order: 1;
+  }
+  .block.left-block--2 {
+    order: 3;
+  }
+  .block.right-block--1 {
+    order: 2;
+  }
+}
