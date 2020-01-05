@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Landing page</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<div class="bg-image">
+		<picture>
+			<source media="(min-width: 1200px)"
+				srcset="img/Background.jpg 1x, img/Background@2x.jpg 2x" alt="Background image">
+			<source media="(min-width: 768px)"
+				srcset="img/Background-tablet.jpg 1x, img/Background-tablet@2x.jpg 2x" alt="Background image">
+			<img class="image" src="img/Background-mobile.jpg" srcset="img/Background-mobile@2x.jpg 2x" alt="Background image">
+		</picture>
+		<img class="image-bottom" src="img/Wave-bottom.svg" alt="Background image bottom">
+	</div>
+
+	<nav class="navbar navbar-dark navbar-expand-md bg-success justify-content-between fixed-top">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link pl-0">LINK 1</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link">LINK 2</a>
+					</li>
+				</ul>
+			</div>
+			<a href="/" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 pl-5 pr-5"><span
+					style="display:none;">Small Image to go here</span></a>
+			<div class="navbar-collapse collapse dual-nav w-50 order-2">
+				<ul class="nav navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link">LINK 3</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link">LINK 4</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="ribbon"></div>
+	<span class="ribbon-text">Enter</span>
+
+	<section class="content">Content</section>
+	<script src="scripts/scripts.js"></script>
+</body>
+
+</html>
