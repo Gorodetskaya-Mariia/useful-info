@@ -1,0 +1,66 @@
+/*!
+ * jQuery Brazzers Carousel v1.0.0 (http://webdesign-master.ru)
+ * Copyright 2015 WebDesign Master.
+ */
+.brazzers-daddy:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.brazzers-daddy {
+    position: relative;
+    height: 100%;
+}
+
+.brazzers-daddy img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
+}
+
+.brazzers-daddy img:first-child {
+    display: block;
+}
+
+.tmb-wrap {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 7px;
+    right: 7px;
+    bottom: 0;
+    height: 100%;
+}
+
+.tmb-wrap .tmb-wrap-table {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.tmb-wrap-table div {
+   
+    border-bottom: 5px solid transparent;
+    width: 100%;
+    cursor: pointer;
+    margin-right: 2px;
+    
+}
+
+.tmb-wrap-table div.active {
+    border-color: #FBB254;
+}
+
+.tmb-wrap-table div:first-child:last-child {
+    border-color: transparent;
+}
+
+.image-wrap {
+    width: 100%;
+    height: 100%;
+}
