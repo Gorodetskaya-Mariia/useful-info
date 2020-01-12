@@ -1,9 +1,9 @@
-// function Circle(){
-// 	this.radius = radius;
-// 	this.draw = function(){
-// 		console.log('draw');
-// 	}
-// }
+function Circle(){
+	this.radius = radius;
+	this.draw = function(){
+		console.log('draw');
+	}
+}
 
 //rewrite it into class
 class Circle {
@@ -39,39 +39,39 @@ class Circle1 {}
 const Square = class {};
 //to implement abstraction we use private properties and methods
 //creation private methods or properties (_radius) by using Symbol()
-// const _radius = Symbol();
-// const _draw = Symbol();
+const _radius = Symbol();
+const _draw = Symbol();
 
-// class Circle2 {
-// 	constructor(radius){
-// 		this[_radius] = radius;
-// 	}
+class Circle2 {
+	constructor(radius){
+		this[_radius] = radius;
+	}
 
-// 	[_draw](){
+	[_draw](){
 
-// 	}
-// }
-// const t = new Circle2(1);
+	}
+}
+const t = new Circle2(1);
 //we use WeakMap to implement private properties and methods in an object
-// const _radius = new WeakMap();
-// const _move = new WeakMap();
+const _radius = new WeakMap();
+const _move = new WeakMap();
 
-// class Circle3 {
-//   constructor(radius) {
-//     _radius.set(this, radius);
+class Circle3 {
+  constructor(radius) {
+    _radius.set(this, radius);
 
-//     _move.set(this, () => {
-//       console.log("move", this);
-//     });
-//   }
+    _move.set(this, () => {
+      console.log("move", this);
+    });
+  }
 
-//   draw() {
-//     _move.get(this)();
-//     console.log("draw");
-//   }
-// }
+  draw() {
+    _move.get(this)();
+    console.log("draw");
+  }
+}
 
-// const r = new Circle3(2);
+const r = new Circle3(2);
 
 //implementing getters and setters
 const _radius = new WeakMap();

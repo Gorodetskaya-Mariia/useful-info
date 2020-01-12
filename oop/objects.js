@@ -10,7 +10,7 @@ const circle = {
 	}
 };
 
-// circle.draw();
+circle.draw();
 //properties: radius and location. they are used to hold values
 //methods: draw. It is used to define some logic
 
