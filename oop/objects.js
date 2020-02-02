@@ -229,3 +229,75 @@ function Goldfish(){
 mixin(Goldfish.prototype,canEat, canSwim);
 const goldfish = new Goldfish();
 console.log(goldfish);
+//---------------------------------------
+//cloning of objects
+const user = {
+	name: "John",
+	age: 23
+}
+const clone = {};
+//1
+for(let key in user){
+	clone[key] = user[key];
+}
+//2
+const clone = Object.assign({}, user);
+//for deep cloning use _.cloneDeep(obj) from lodash
+const data = [
+	{name: "M", age: 20},
+	{name: "F", age: 25},
+	{name: "M", age: 20},
+	{name: "F", age: 25},
+	{name: "F", age: 21},
+	{name: "M", age: 23}
+];
+
+
+function normalizeData(obj,propertyBySort,anotherProperty){
+	let newObj = {};
+
+	obj.forEach(item=>{
+		if(!newObj[item[propertyBySort]]){
+			newObj[item[propertyBySort]] = [];
+		}
+		newObj[item[propertyBySort]].push(item[anotherProperty])
+	});
+
+	return newObj;
+}
+//А потом напиши ф-ю которая выдаст средний возраст по полю "name"
+function range(array){
+	return array.reduce((sum, item)=>{
+		return sum + item;
+	},0)/ array.length;
+}
+const newData = normalizeData(data,"name","age");
+range(newData["M"]);
+
+// 1. Cat constructor, requiring arguments for name and weight
+// 2. Throw an error if name or weight not specified when invoking the constructor.
+// 3. Cat.averageWeight() method should give the average weight of all cat instances created with Cat, even after if the instance's properties have changed.
+// 4. Must use Object.defineProperty
+var Cat = (function (name, weight) {
+  let cats = [];
+  function Cat(name, weight){
+    if(!name && !weight) throw new Error("enter values");
+    Object.defineProperty(this, 'name', {
+      get: function () { return name }
+    });
+
+     Object.defineProperty(this, 'weight', {
+      get: function () { return weight },
+      set: function (x) { weight = x; return weight }
+    });
+    cats.push(this);  
+	};
+	
+  Cat.averageWeight = function(){
+    return cats.reduce(function (sum, cat) { return sum + cat.weight }, 0) / cats.length;
+  }
+  
+  return Cat;
+}());
+
+fluffy = new Cat('fluffy', 15);
