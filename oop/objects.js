@@ -301,3 +301,27 @@ var Cat = (function (name, weight) {
 }());
 
 fluffy = new Cat('fluffy', 15);
+
+// New
+// So what about new? Well, the unary operator new is intended to create "instances" of a constructor function. To be more precise, the operation new Constructor(arg1, arg2, ...argX) does the following:
+
+//1 Creates an empty object (which we'll call instance) which prototypally inherits from Constructor.prototype
+//2 Binds Constructor to instance (meaning this is instance) and invokes Constructor with any arguments passed in
+//3 If the return value of Constructor is an object (including arrays, functions, dates, regexes, etc.) the operation evaluates to that object
+//4 Otherwise, the operation evaluates to instance
+//TODO
+// Write a function nouveau (that's French for "new") which takes one function parameter (the constructor), plus an unknown number of additional parameters of any type (arguments for the constructor). When invoked, nouveau should do everything new does and return the same object new would evaluate to, as specified above.
+function nouveau (Constructor, ...args) {
+  const instance = Object.create(Constructor.prototype);//1
+  const result = Constructor.apply(instance, args);//2
+  return result === Object(result) ? result : instance;//3,4
+function Person (name) {
+  this.name = name;
+}
+Person.prototype.sayHi = function () {
+  return 'Hi, I am ' + this.name;
+};
+
+var guy = nouveau(Person, 'Guy');
+guy.name;// 'Guy'
+guy.sayHi();//'Hi, I am Guy'
