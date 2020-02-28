@@ -1,24 +1,33 @@
-input[type=range] {
+body {
+  padding-top: 100px;
+}
+#input {
   -webkit-appearance: none;
   margin: 0;
   width: 100%;
   padding: 10px 0;
-}
-input[type=range]::-ms-tooltip {
-  display: none;
-}
-input[type=range]:focus {
   outline: none;
 }
-input[type=range]::-webkit-slider-runnable-track {
+#input::-ms-tooltip {
+  display: none;
+}
+#input:focus {
+  outline: 0;
+}
+input[type="range" i]::-webkit-slider-container {
+  outline: none;
+}
+input[type='range']::-moz-focus-outer { border: 0; }
+#input::-webkit-slider-runnable-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
   background: #E2E5EB;
   border-radius: 3px;
   border: 0;
+  outline: none;
 }
-input[type=range]::-webkit-slider-thumb {
+#input::-webkit-slider-thumb {
   border: 0;
   height: 3px;
   width: 100px;
@@ -26,28 +35,33 @@ input[type=range]::-webkit-slider-thumb {
   background: #E30611;
   cursor: pointer;
   -webkit-appearance: none;
+  appearance: none;
   margin-top: 0;
+  outline: none;
 }
-input[type=range]:focus::-webkit-slider-runnable-track {
+#input:focus::-webkit-slider-runnable-track {
   background: #E2E5EB;
+  outline: none;
 }
-input[type=range]::-moz-range-track {
+#input::-moz-range-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
   background: #E2E5EB;
   border-radius: 3px;
   border: 0;
+  outline: none;
 }
-input[type=range]::-moz-range-thumb {
+#input::-moz-range-thumb {
   border: 0;
   height: 3px;
   width: 100px;
   border-radius: 3px;
   background: #E30611;
   cursor: pointer;
+  outline: none;
 }
-input[type=range]::-ms-track {
+#input::-ms-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
@@ -55,28 +69,34 @@ input[type=range]::-ms-track {
   border-color: transparent;
   border-width: 3px 0;
   color: transparent;
+  outline: none;
 }
-input[type=range]::-ms-fill-lower {
+#input::-ms-fill-lower {
   background: #E2E5EB;
   border: 0;
   border-radius: 3px;
+  outline: none;
 }
-input[type=range]::-ms-fill-upper {
+#input::-ms-fill-upper {
   background: #E2E5EB;
   border: 0;
   border-radius: 3px;
+  outline: none;
 }
-input[type=range]::-ms-thumb {
+#input::-ms-thumb {
   border: 0;
   height: 3px;
   width: 100px;
   border-radius: 3px;
   background: #E30611;
   cursor: pointer;
+  outline: none;
 }
-input[type=range]:focus::-ms-fill-lower {
+#input:focus::-ms-fill-lower {
   background: #E2E5EB;
+  outline: none;
 }
-input[type=range]:focus::-ms-fill-upper {
+#input:focus::-ms-fill-upper {
   background: #E2E5EB;
+  outline: none;
 }
