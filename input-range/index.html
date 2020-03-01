@@ -6,17 +6,27 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <input type="range" min="0" max="100" value="50" id="input"/>
-  <br/><br/>
-  <input type="range" min="0" max="100" value="50" class="input"/>
-  <br/><br/>
-  <div id="container">
-    <input type="range">
+  <br /><br />
+
+  <div class="event-block-mobile-gallery__container">
+    <div class="event-block-mobile-gallery__wrapper">
+      <div class="event-block-mobile-gallery__item">1</div>
+      <div class="event-block-mobile-gallery__item">2</div>
+      <div class="event-block-mobile-gallery__item">3</div>
+      <div class="event-block-mobile-gallery__item">4</div>
+      <div class="event-block-mobile-gallery__item">5</div>
+      <div class="event-block-mobile-gallery__item">6</div>
+    </div>
   </div>
+  <div class="event-block-mobile-gallery__progress-container">
+    <div class="slider-progress">
+      <input type="range" min="0" max="100" value="0" id="input" class="slider-progress__line" />
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
