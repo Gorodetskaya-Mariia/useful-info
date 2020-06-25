@@ -520,3 +520,27 @@ body {
 	opacity: 1;
 }
 
+/* styles for dots */
+.slick-dots {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.slick-dots li button {
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  background-color: aqua;
+  border-radius: 50%;
+  -webkit-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  cursor: pointer;
+}
+
+.slick-dots li button:hover {
+  width: 40px;
+  border-radius: 25px;
+}
