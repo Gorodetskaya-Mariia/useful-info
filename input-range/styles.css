@@ -13,11 +13,14 @@ body {
 #input:focus {
   outline: 0;
 }
-input[type="range" i]::-webkit-slider-container {
+input[type="range"]::-webkit-slider-container {
   outline: none;
 }
 input[type="range"]::-moz-focus-outer {
   border: 0;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: transparent;
 }
 #input::-webkit-slider-runnable-track {
   width: 100%;
@@ -25,9 +28,14 @@ input[type="range"]::-moz-focus-outer {
   border-radius: 3px;
   border: 0;
   outline: none;
+  background-color: transparent;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAIAAADdv/LVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVBhXY3j09DUTAwMDEwMDAwAbDwK3tI4IZAAAAABJRU5ErkJggg==");
   background-repeat: repeat-x;
   background-position: center;
+}
+input[type="range"]::-webkit-slider-thumb {
+  border: 0;
+  background-color: transparent;
 }
 #input::-webkit-slider-thumb {
   border: 0;
