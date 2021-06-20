@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky button</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <style type="text/css">
+    body {
+      max-width: 1000px;
+      min-width: 300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .first,
+    .second,
+    .third,
+    .fourth {
+      width: 300px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid black;
+    }
+
+    .footer {
+      height: 150px;
+    }
+
+    .fixed-box {
+      position: sticky;
+      display: block;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .fixed-box.show .fixed-box__container {
+      display: block;
+    }
+
+    .fixed-box.fixed {
+      position: fixed;
+    }
+
+    .fixed-box__container {
+      display: none;
+      padding: 26px 20px;
+      background: white;
+    }
+
+    .fixed-box__button {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      background: red;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+  </style>
+  <div class="first">
+    <button class="stick__block" id='fixed-button'>Upload</button>
+  </div>
+  <div class="second"></div>
+  <div class="third"></div>
+  <div class="fourth"></div>
+  <div class="second"></div>
+  <div class="third"></div>
+  <div class="fourth"></div>
+  <div class="fixed-box">
+    <div class="fixed-box__container" data-fixed-box="fixed-button">
+      <a class="fixed-box__button" href="#">Button</a>
+    </div>
+  </div>
+  <div class="footer">footer</div>
+</body>
+
+</html>
