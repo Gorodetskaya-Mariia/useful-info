@@ -1,0 +1,21 @@
+@import "./variables/variables.scss";
+
+@import "./components/tags.scss";
+@import "./components/table.scss";
+
+body {
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}

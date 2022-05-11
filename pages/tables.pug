@@ -1,0 +1,15 @@
+extends ../layout.pug
+
+block title
+  | Tables
+
+block page
+
+  h1 Tables
+  include ../mixins/table.pug
+  include ../data/table
+
+  +table(tableData,{
+    isBordered: true,
+    isShadow: true,
+  })

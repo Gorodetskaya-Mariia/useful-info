@@ -1,0 +1,6 @@
+mixin tags(data)
+  .tags
+    ul.tags__list
+      each item in data
+        li.tags__item
+          a.tags__link(href= item.url) !{item.title}

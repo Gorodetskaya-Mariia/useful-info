@@ -1,0 +1,16 @@
+mixin table(data, options)
+  - var { headers, rows } = data;
+  - var { isBordered, isShadow } = options;
+  table.table
+    if(headers)
+      thead.table__head
+          tr.table__head-row
+            each item in headers
+              th(class=`table__head-title ${isBordered ? 'table__head-title--bordered' : ''} ${isShadow ? 'table__head-title--shadow' : ''}`) !{item}
+              th
+      tbody
+        each row in rows
+          tr.table__row
+              each item in row
+                td(class=`table__row-value ${isBordered ? 'table__row-value--bordered' : ''} ${isShadow ? 'table__row-value--shadow' : ''}`) !{item}
+                td
